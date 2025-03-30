@@ -1,1 +1,34 @@
+MODE OPERATOIRE D'INSTALLATION DE JENKINS VIA DOCKER COMPOSE
+------------------------------------------------------------
 
+
+PRE-REQUIS 
+Télécharger le ficher jenkins.yml de ce même repository keyce-academy
+
+0/  Ouvrir Docker Desktop
+1/  Vérfier la version de Docker instalée à avec les commandes suivantes (via le terminal)
+    a- docker --version 
+    b- docker-compose --version
+
+2/  Ouvrir le terminal à l'endroit où se situe le fichier jenkins.yml
+    > docker-compose -f jenkins.yml up
+
+3/ Dans un navigateur, ouvrir http://localhost:8080
+4/ Arrêter le conteneur (CTRL+C)
+
+5/ Lancer la commande suivante via un terminal
+   > docker-compose -f jenkins.yml up -d
+
+6/ Rafarichir le navigateur.
+    La page jenkins doit être présente
+
+7/ Lancer la commande docker ps pour récupérer l'id du container
+
+8/ Lancer les commandes
+
+    docker exec -it ID_DU_CONTAINER_ETAPE_7 /bin/bash
+    cat /var/jenkins_home/secrets/initialAdminPassword
+
+Installer les plugins suggérés
+
+Jenkins est prêt à l'utilisation
