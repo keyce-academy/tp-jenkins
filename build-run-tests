@@ -1,0 +1,19 @@
+BUILD
+
+mkdir -p /tmp/keyce/
+rm -rf /tmp/keyce/*
+echo '
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello Keyce World!");
+    }
+}
+'  >/tmp/keyce/Main.java
+javac /tmp/keyce/Main.java
+
+
+RUN
+
+
+
+TESTS
